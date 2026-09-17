@@ -68,6 +68,14 @@ class DiffEngine:
         modified = []
         unchanged_count = 0
 
+        revoked_stix_ids = [row["_id"] for row in results if row["change"] == "revoked"]
+        try:
+            successor_map = self._find_successors_batch(to_release, revoked_stix_ids)
+        except Exception:
+            successor_map = {}
+            for sid in revoked_stix_ids:
+                successor_map[sid] = self._find_successors_fallback(to_release, sid)
+
         for row in results:
             change = row["change"]
             stix_id = row["_id"]
@@ -81,11 +89,10 @@ class DiffEngine:
 
             elif change == "revoked":
                 old_info = row.get("old", {})
-                successors = self._find_successors(to_release, stix_id)
                 revoked.append({
                     "stix_id": stix_id,
                     "external_id": old_info.get("xid") if old_info else None,
-                    "successors": successors,
+                    "successors": successor_map.get(stix_id, []),
                 })
 
             elif change == "deprecated":
@@ -161,7 +168,27 @@ class DiffEngine:
             )
         logger.info(f"Sealed release {to_release}")
 
-    def _find_successors(self, release_id: str, stix_id: str) -> list[dict]:
+    def _find_successors_batch(self, release_id: str, revoked_stix_ids: list[str]) -> dict[str, list[dict]]:
+        if not revoked_stix_ids:
+            return {}
+        pipeline = [
+            {"$match": {
+                "release_id": release_id,
+                "kind": "revoked_by",
+                "from.stix_id": {"$in": revoked_stix_ids},
+            }},
+            {"$group": {
+                "_id": "$from.stix_id",
+                "successors": {"$push": {
+                    "stix_id": "$to.stix_id",
+                    "external_id": "$to.external_id",
+                }},
+            }},
+        ]
+        results = list(self.db.identity_edges.aggregate(pipeline))
+        return {r["_id"]: r["successors"] for r in results}
+
+    def _find_successors_fallback(self, release_id: str, stix_id: str) -> list[dict]:
         edges = self.db.identity_edges.find({
             "release_id": release_id,
             "kind": "revoked_by",

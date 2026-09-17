@@ -26,7 +26,10 @@ class DriftDetector:
         if not all_affected_ids:
             return findings
 
-        affected_scenarios = self._query_affected_scenarios(all_affected_ids)
+        try:
+            affected_scenarios = self._query_affected_scenarios_lookup(all_affected_ids)
+        except Exception:
+            affected_scenarios = self._query_affected_scenarios(all_affected_ids)
 
         for hit in affected_scenarios:
             stix_id = hit["stix_id"]
@@ -89,6 +92,39 @@ class DriftDetector:
         inserted = self.upsert_findings(findings)
         logger.info(f"Drift detection for {diff_id}: {inserted} findings upserted from {len(findings)} candidates")
         return findings
+
+    def _query_affected_scenarios_lookup(self, stix_ids: list[str]) -> list[dict]:
+        pipeline = [
+            {"$match": {"stix_id": {"$in": stix_ids}, "is_head": True}},
+            {"$lookup": {
+                "from": "reports",
+                "let": {"sid": "$scenario_id", "rev": "$rev"},
+                "pipeline": [
+                    {"$match": {"$expr": {"$anyElementTrue": {
+                        "$map": {
+                            "input": "$manifest.scenario_set",
+                            "as": "pin",
+                            "in": {"$and": [
+                                {"$eq": ["$$pin.scenario_id", "$$sid"]},
+                                {"$eq": ["$$pin.rev", "$$rev"]},
+                            ]},
+                        },
+                    }}}},
+                    {"$project": {"_id": 1}},
+                ],
+                "as": "matched_reports",
+            }},
+            {"$project": {
+                "scenario_id": 1,
+                "rev": 1,
+                "step_id": 1,
+                "stix_id": 1,
+                "report_ids": {
+                    "$map": {"input": "$matched_reports", "as": "r", "in": "$$r._id"},
+                },
+            }},
+        ]
+        return list(self.secure_db.scenario_attack_refs.aggregate(pipeline))
 
     def _query_affected_scenarios(self, stix_ids: list[str]) -> list[dict]:
         refs = list(self.secure_db.scenario_attack_refs.find({

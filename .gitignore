@@ -34,3 +34,7 @@ node_modules/
 
 *.pdf
 *.docx
+
+dagster_home/
+.dagster/
+storage/

@@ -32,3 +32,6 @@ class Settings(BaseSettings):
     github_token: str = ""
     watch_domains: list[str] = ["enterprise-attack", "mobile-attack", "ics-attack"]
     watch_interval_seconds: int = 3600
+
+    api_host: str = "0.0.0.0"
+    api_port: int = 8000

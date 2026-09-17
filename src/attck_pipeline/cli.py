@@ -222,5 +222,64 @@ def watch(interval: int = 3600):
     run_watch_loop(settings, db, secure_db, storage=storage)
 
 
+@app.command()
+def lineage(stix_id: str, release_id: str):
+    """Resolve the revocation chain for a STIX ID within a release."""
+    settings, client, db, secure_db, _ = _get_resources()
+    from attck_pipeline.query.lineage import LineageResolver
+
+    resolver = LineageResolver(db)
+    result = resolver.resolve_to_active(stix_id, release_id)
+
+    if not result["chain"]:
+        logger.info(f"No revocation chain found for {stix_id} in {release_id}")
+    else:
+        for step in result["chain"]:
+            logger.info(f"  depth {step['depth']}: {step['from']} → {step['to']}")
+        logger.info(f"Terminal: {result['terminal']} (active={result['is_active']})")
+    client.close()
+
+
+@app.command()
+def search(
+    query: str,
+    kind: str | None = None,
+    release_id: str | None = None,
+    limit: int = 20,
+):
+    """Search techniques by name or description."""
+    settings, client, db, secure_db, _ = _get_resources()
+    from attck_pipeline.query.search import TechniqueSearch
+
+    searcher = TechniqueSearch(db)
+    results = searcher.search(query, kind=kind, limit=limit, release_id=release_id)
+
+    for r in results:
+        ext = r.get("external_id", "—")
+        name = r.get("name", "")
+        score = r.get("score", "")
+        score_str = f" score={score:.1f}" if isinstance(score, (int, float)) else ""
+        logger.info(f"  {ext:12s} {name:40s}{score_str}")
+    logger.info(f"{len(results)} results")
+    client.close()
+
+
+@app.command()
+def serve(
+    host: str = "0.0.0.0",
+    port: int = 8000,
+    reload: bool = False,
+):
+    """Start the FastAPI REST API server."""
+    import uvicorn
+
+    uvicorn.run(
+        "attck_pipeline.api.main:app",
+        host=host,
+        port=port,
+        reload=reload,
+    )
+
+
 if __name__ == "__main__":
     app()

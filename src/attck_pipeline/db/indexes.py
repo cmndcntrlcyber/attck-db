@@ -1,4 +1,4 @@
-from pymongo import ASCENDING, IndexModel
+from pymongo import ASCENDING, TEXT, IndexModel
 
 
 def framework_releases_indexes() -> list[IndexModel]:
@@ -12,6 +12,12 @@ def attack_objects_indexes() -> list[IndexModel]:
         IndexModel([("stix_id", ASCENDING)]),
         IndexModel([("kind", ASCENDING)]),
         IndexModel([("external_id", ASCENDING)]),
+        IndexModel(
+            [("name", TEXT), ("description", TEXT)],
+            weights={"name": 10, "description": 1},
+            name="attack_objects_text",
+            default_language="english",
+        ),
     ]
 
 
@@ -74,7 +80,9 @@ def drift_findings_indexes() -> list[IndexModel]:
 
 
 def reports_indexes() -> list[IndexModel]:
-    return []
+    return [
+        IndexModel([("manifest.scenario_set.scenario_id", ASCENDING)]),
+    ]
 
 
 def overlay_snapshots_indexes() -> list[IndexModel]:
