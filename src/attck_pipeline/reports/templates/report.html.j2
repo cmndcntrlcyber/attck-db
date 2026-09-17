@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ report_id }} — ATT&CK Coverage Report</title>
+<style>
+  @page { size: A4; margin: 2cm; }
+  body { font-family: 'DejaVu Sans', 'Liberation Sans', Arial, sans-serif; font-size: 10pt; color: #1a1a1a; line-height: 1.5; }
+  h1 { font-size: 18pt; border-bottom: 2px solid #1a1a1a; padding-bottom: 4pt; }
+  h2 { font-size: 14pt; color: #333; margin-top: 1.5em; border-bottom: 1px solid #ccc; padding-bottom: 2pt; }
+  h3 { font-size: 11pt; color: #555; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
+  th, td { border: 1px solid #ccc; padding: 4pt 8pt; text-align: left; font-size: 9pt; }
+  th { background: #f0f0f0; font-weight: bold; }
+  .meta { color: #666; font-size: 9pt; }
+  .tag { display: inline-block; background: #e8e8e8; border-radius: 3pt; padding: 1pt 4pt; margin: 1pt; font-size: 8pt; }
+  .revoked { color: #c0392b; }
+  .deprecated { color: #e67e22; }
+  .active { color: #27ae60; }
+</style>
+</head>
+<body>
+
+<h1>{{ report_id }}</h1>
+<p class="meta">
+  Generated: {{ generated_at }}<br>
+  Framework release: {{ framework_release }}<br>
+  Manifest SHA-256: <code>{{ manifest_sha256 }}</code>
+</p>
+
+<h2>Techniques ({{ techniques | length }})</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Kind</th>
+      <th>Tactics</th>
+      <th>Platforms</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for t in techniques %}
+    <tr>
+      <td>{{ t.external_id or t.stix_id }}</td>
+      <td>{{ t.name }}</td>
+      <td>{{ t.kind }}</td>
+      <td>{{ (t.tactic_shortnames or []) | join(', ') }}</td>
+      <td>{{ (t.platforms or []) | join(', ') }}</td>
+      <td class="{{ 'revoked' if t.revoked else ('deprecated' if t.deprecated else 'active') }}">
+        {{ 'revoked' if t.revoked else ('deprecated' if t.deprecated else 'active') }}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<h2>Scenarios ({{ scenarios | length }})</h2>
+{% for s in scenarios %}
+<h3>{{ s.scenario_id }} (rev {{ s.rev }})</h3>
+<p class="meta">Pin: {{ s.framework_pin }}</p>
+<table>
+  <thead>
+    <tr><th>Step</th><th>Action</th><th>Technique</th></tr>
+  </thead>
+  <tbody>
+  {% for step in s.steps %}
+    <tr>
+      <td>{{ step.step_id }}</td>
+      <td>{{ step.action }}</td>
+      <td>{{ step.attack_ref.external_id_at_pin if step.attack_ref else '' }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endfor %}
+
+{% if overlay %}
+<h2>Overlay</h2>
+<p class="meta">Snapshot: {{ overlay._id }}, SHA-256: {{ overlay.sha256 }}</p>
+{% endif %}
+
+</body>
+</html>

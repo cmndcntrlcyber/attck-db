@@ -1,0 +1,58 @@
+[
+    {
+        "id": "page-001",
+        "properties": {
+            "Name": {"title": [{"plain_text": "PowerShell Execution"}]},
+            "Tags": {"multi_select": [
+                {"name": "T1059"},
+                {"name": "TA0002"},
+                {"name": "Enterprise"},
+                {"name": "Emulation Plan"},
+                {"name": "APT28"}
+            ]},
+            "MITRE ATT&CK Reference": {"url": "https://attack.mitre.org/techniques/T1059/001/"},
+            "Mitigation": {"url": null},
+            "POC Reference": {"rich_text": [{"plain_text": "Internal POC ref #42"}]},
+            "Parent Project": {"url": null},
+            "Time of Change": {"last_edited_time": "2026-09-01T12:00:00.000Z"}
+        }
+    },
+    {
+        "id": "page-002",
+        "properties": {
+            "Name": {"title": [{"plain_text": "Credential Dumping via LSASS"}]},
+            "Tags": {"multi_select": [
+                {"name": "T1592.01"},
+                {"name": "TA001"},
+                {"name": "T206"},
+                {"name": "T1098.00"},
+                {"name": "G0007"},
+                {"name": "execution"}
+            ]},
+            "MITRE ATT&CK Reference": {"url": "https://attack.mitre.org/techniques/T1003/"},
+            "Mitigation": {"url": "https://attack.mitre.org/mitigations/M1043/"},
+            "POC Reference": {"rich_text": []},
+            "Parent Project": {"url": "https://example.com/project/red-team-q3"},
+            "Time of Change": {"last_edited_time": "2026-09-10T08:30:00.000Z"}
+        }
+    },
+    {
+        "id": "page-003",
+        "properties": {
+            "Name": {"title": [{"plain_text": "Ransomware Simulation"}]},
+            "Tags": {"multi_select": [
+                {"name": "T1486"},
+                {"name": "impact"},
+                {"name": "Ransomware"},
+                {"name": "Custom Plan"},
+                {"name": "Mobile"},
+                {"name": "S0154"}
+            ]},
+            "MITRE ATT&CK Reference": {"url": "https://attack.mitre.org/techniques/T1486/"},
+            "Mitigation": {"url": null},
+            "POC Reference": {"rich_text": [{"plain_text": "See internal wiki: /ransomware-sim"}]},
+            "Parent Project": {"url": null},
+            "Time of Change": {"last_edited_time": "2026-08-20T15:00:00.000Z"}
+        }
+    }
+]

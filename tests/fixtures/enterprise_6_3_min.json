@@ -1,0 +1,158 @@
+{
+    "type": "bundle",
+    "id": "bundle--a4f15467-2e2e-4e26-a927-382cfb6e2f43",
+    "spec_version": "2.0",
+    "objects": [
+        {
+            "type": "identity",
+            "id": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "created": "2017-06-01T00:00:00.000Z",
+            "modified": "2017-06-01T00:00:00.000Z",
+            "name": "The MITRE Corporation",
+            "identity_class": "organization"
+        },
+        {
+            "type": "marking-definition",
+            "id": "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168",
+            "created": "2017-06-01T00:00:00.000Z",
+            "definition_type": "statement",
+            "definition": {
+                "statement": "Copyright 2020, The MITRE Corporation"
+            }
+        },
+        {
+            "type": "x-mitre-tactic",
+            "id": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+            "created": "2018-10-17T00:14:20.652Z",
+            "modified": "2019-07-19T17:44:53.176Z",
+            "name": "Execution",
+            "description": "The adversary is trying to run malicious code.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "TA0002",
+                    "url": "https://attack.mitre.org/tactics/TA0002"
+                }
+            ],
+            "x_mitre_shortname": "execution",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+            "created": "2017-05-31T21:30:44.329Z",
+            "modified": "2020-03-02T18:55:29.000Z",
+            "name": "PowerShell",
+            "description": "Adversaries may abuse PowerShell commands and scripts for execution.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1086",
+                    "url": "https://attack.mitre.org/techniques/T1086"
+                }
+            ],
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "execution"
+                }
+            ],
+            "x_mitre_platforms": [
+                "Windows"
+            ],
+            "x_mitre_version": "1.1",
+            "x_mitre_detection": "Monitor for loading of PowerShell modules.",
+            "x_mitre_is_subtechnique": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--7385dfaf-6886-4229-9ecd-6fd678c96ae1",
+            "created": "2017-05-31T21:30:49.546Z",
+            "modified": "2020-03-02T14:26:01.000Z",
+            "name": "Command and Scripting Interpreter",
+            "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1059",
+                    "url": "https://attack.mitre.org/techniques/T1059"
+                }
+            ],
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "execution"
+                }
+            ],
+            "x_mitre_platforms": [
+                "Linux",
+                "macOS",
+                "Windows"
+            ],
+            "x_mitre_version": "2.0",
+            "x_mitre_detection": "Monitor command-line arguments.",
+            "x_mitre_is_subtechnique": false,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "id": "attack-pattern--b21c3b2d-02e6-45b1-980b-e69051040839",
+            "created": "2017-05-31T21:30:41.022Z",
+            "modified": "2020-01-17T16:45:23.000Z",
+            "name": "Exploit Public-Facing Application",
+            "description": "Adversaries may attempt to exploit a weakness in an Internet-facing host or system to initially access a network.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "T1190",
+                    "url": "https://attack.mitre.org/techniques/T1190"
+                }
+            ],
+            "kill_chain_phases": [
+                {
+                    "kill_chain_name": "mitre-attack",
+                    "phase_name": "initial-access"
+                }
+            ],
+            "x_mitre_platforms": [
+                "Windows",
+                "Linux",
+                "macOS",
+                "Containers"
+            ],
+            "x_mitre_version": "2.3",
+            "x_mitre_detection": "Monitor application logs for abnormal usage.",
+            "x_mitre_is_subtechnique": false,
+            "x_mitre_deprecated": true,
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        },
+        {
+            "type": "x-mitre-tactic",
+            "id": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7451d5d0d6aa",
+            "created": "2018-10-17T00:14:20.652Z",
+            "modified": "2019-07-25T11:22:30.000Z",
+            "name": "Initial Access",
+            "description": "The adversary is trying to get into your network.",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "external_id": "TA0001",
+                    "url": "https://attack.mitre.org/tactics/TA0001"
+                }
+            ],
+            "x_mitre_shortname": "initial-access",
+            "object_marking_refs": [
+                "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+            ]
+        }
+    ]
+}

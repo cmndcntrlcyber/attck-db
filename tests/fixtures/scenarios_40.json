@@ -1,0 +1,1242 @@
+[
+  {
+    "_id": {
+      "scenario_id": "LSZ-0101",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0101",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0101",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0102",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0102",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0102",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0103",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0103",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0103",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0104",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0104",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0104",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0105",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0105",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0105",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0106",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0106",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0106",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0107",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0107",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0107",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0108",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0108",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0108",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0109",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0109",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0109",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0110",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0110",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0110",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0111",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0111",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0111",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0112",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0112",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0112",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0113",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0113",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0113",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0114",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0114",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0114",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0115",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0115",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0115",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0116",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0116",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0116",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0117",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0117",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0117",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0118",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0118",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0118",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0119",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0119",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0119",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0120",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0120",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0120",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0121",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0121",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0121",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0122",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0122",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0122",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0123",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0123",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0123",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0124",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0124",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0124",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0125",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0125",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0125",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0126",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0126",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0126",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0127",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0127",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0127",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0128",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0128",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0128",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0129",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0129",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0129",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0130",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0130",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0130",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0131",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0131",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0131",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0132",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0132",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0132",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0133",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0133",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0133",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0134",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0134",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0134",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0135",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0135",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0135",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0136",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0136",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0136",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0137",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0137",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0137",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0138",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0138",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0138",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0139",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0139",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0139",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  },
+  {
+    "_id": {
+      "scenario_id": "LSZ-0140",
+      "rev": 3
+    },
+    "scenario_id": "LSZ-0140",
+    "rev": 3,
+    "is_head": true,
+    "framework_pin": "enterprise-attack@6.3",
+    "content_hash": "sha256:placeholder_LSZ-0140",
+    "steps": [
+      {
+        "step_id": "s1",
+        "order": 1,
+        "action": "Encoded PowerShell download cradle",
+        "attack_ref": {
+          "stix_id": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+          "external_id_at_pin": "T1086",
+          "release_id": "enterprise-attack@6.3"
+        }
+      }
+    ],
+    "classification": {
+      "sensitivity": "Client-Confidential",
+      "owner": "test"
+    },
+    "created_at": "2026-07-01T00:00:00Z",
+    "created_by": "test-harness",
+    "recorded_from": "2026-07-01T00:00:00Z",
+    "recorded_to": null
+  }
+]
