@@ -26,6 +26,7 @@ def create_app() -> FastAPI:
         diffs,
         findings,
         ingest,
+        nemesis,
         overlay,
         releases,
         reports,
@@ -39,6 +40,7 @@ def create_app() -> FastAPI:
     app.include_router(scenarios.router, prefix="/scenarios", tags=["scenarios"])
     app.include_router(reports.router, prefix="/reports", tags=["reports"])
     app.include_router(overlay.router, prefix="/overlay", tags=["overlay"])
+    app.include_router(nemesis.router, prefix="/nemesis", tags=["nemesis"])
 
     return app
 

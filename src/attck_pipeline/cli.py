@@ -159,6 +159,25 @@ def overlay_sync():
 
 
 @app.command()
+def nemesis_sync():
+    """Sync findings from Nemesis into the overlay."""
+    settings, client, db, secure_db, storage = _get_resources(with_storage=True)
+    from attck_pipeline.sources.nemesis_source import NemesisSource
+
+    if not settings.nemesis_url:
+        logger.error("LISZT_NEMESIS_URL not set")
+        raise typer.Exit(1)
+
+    source = NemesisSource(settings)
+    snapshot = source.fetch_snapshot(db=db, storage=storage)
+    logger.info(
+        f"Nemesis snapshot: {snapshot['_id']} ({len(snapshot['rows'])} findings, "
+        f"sha={snapshot['sha256'][:16]}…)"
+    )
+    client.close()
+
+
+@app.command()
 def report_build(report_id: str):
     """Render a report from its stored manifest."""
     settings, client, db, secure_db, storage = _get_resources(with_storage=True)

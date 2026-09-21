@@ -33,5 +33,11 @@ class Settings(BaseSettings):
     watch_domains: list[str] = ["enterprise-attack", "mobile-attack", "ics-attack"]
     watch_interval_seconds: int = 3600
 
+    nemesis_url: str = ""
+    nemesis_hasura_secret: str = ""
+    nemesis_project_filter: str = ""
+    nemesis_sync_interval_seconds: int = 3600
+    nemesis_min_severity: int = 0
+
     api_host: str = "0.0.0.0"
     api_port: int = 8000
