@@ -39,5 +39,16 @@ class Settings(BaseSettings):
     nemesis_sync_interval_seconds: int = 3600
     nemesis_min_severity: int = 0
 
+    nvd_api_key: str = ""
+    nvd_base_url: str = "https://services.nvd.nist.gov/rest/json"
+    nvd_rate_limit_seconds: float = 0.6
+
+    capec_stix_repo: str = "mitre/cti"
+    capec_stix_branch: str = "master"
+    capec_stix_path: str = "capec/2.1/stix-capec.json"
+
+    vulnmap_default_release: str = ""
+    vulnmap_confidence_threshold: float = 0.3
+
     api_host: str = "0.0.0.0"
     api_port: int = 8000

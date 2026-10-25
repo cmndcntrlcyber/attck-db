@@ -7,6 +7,12 @@ from attck_pipeline.documents.findings import DriftFindingDoc
 from attck_pipeline.documents.reports import ReportDoc
 from attck_pipeline.documents.overlays import OverlaySnapshotDoc
 from attck_pipeline.documents.ingest import IngestQuarantineDoc, IngestRunDoc
+from attck_pipeline.documents.vulnmap import (
+    AssetTechniqueMappingDoc,
+    CapecObjectDoc,
+    ScanSnapshotDoc,
+    VulnTechniqueEdgeDoc,
+)
 
 PUBLIC_DOCUMENTS = [
     FrameworkReleaseDoc,
@@ -17,6 +23,10 @@ PUBLIC_DOCUMENTS = [
     OverlaySnapshotDoc,
     IngestQuarantineDoc,
     IngestRunDoc,
+    CapecObjectDoc,
+    VulnTechniqueEdgeDoc,
+    ScanSnapshotDoc,
+    AssetTechniqueMappingDoc,
 ]
 
 SECURE_DOCUMENTS = [

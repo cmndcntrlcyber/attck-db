@@ -11,6 +11,10 @@ PUBLIC_COLLECTIONS = {
     "overlay_snapshots": (schemas.overlay_snapshots_schema, indexes.overlay_snapshots_indexes),
     "ingest_quarantine": (schemas.ingest_quarantine_schema, indexes.ingest_quarantine_indexes),
     "ingest_runs": (schemas.ingest_runs_schema, indexes.ingest_runs_indexes),
+    "capec_objects": (schemas.capec_objects_schema, indexes.capec_objects_indexes),
+    "vuln_technique_edges": (schemas.vuln_technique_edges_schema, indexes.vuln_technique_edges_indexes),
+    "scan_snapshots": (schemas.scan_snapshots_schema, indexes.scan_snapshots_indexes),
+    "asset_technique_mappings": (schemas.asset_technique_mappings_schema, indexes.asset_technique_mappings_indexes),
 }
 
 SECURE_COLLECTIONS = {

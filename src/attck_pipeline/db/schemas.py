@@ -349,3 +349,118 @@ def ingest_runs_schema() -> dict:
             "error": {"bsonType": ["string", "null"]},
         },
     }
+
+
+def capec_objects_schema() -> dict:
+    return {
+        "bsonType": "object",
+        "required": ["_id", "capec_id", "name", "attack_technique_ids", "cwe_ids", "raw"],
+        "properties": {
+            "_id": {"bsonType": "string"},
+            "capec_id": {"bsonType": "string"},
+            "name": {"bsonType": "string"},
+            "description": {"bsonType": ["string", "null"]},
+            "severity": {"bsonType": ["string", "null"]},
+            "likelihood": {"bsonType": ["string", "null"]},
+            "attack_technique_ids": {
+                "bsonType": "array",
+                "items": {"bsonType": "string"},
+            },
+            "cwe_ids": {
+                "bsonType": "array",
+                "items": {"bsonType": "string"},
+            },
+            "raw": {"bsonType": "object"},
+        },
+    }
+
+
+def vuln_technique_edges_schema() -> dict:
+    return {
+        "bsonType": "object",
+        "required": [
+            "_id",
+            "source_type",
+            "source_id",
+            "technique_ids",
+            "derivation",
+            "confidence",
+            "release_id",
+            "computed_at",
+        ],
+        "properties": {
+            "_id": {
+                "bsonType": "object",
+                "required": ["source_type", "source_id"],
+                "properties": {
+                    "source_type": {"enum": ["cve", "cwe", "capec", "service"]},
+                    "source_id": {"bsonType": "string"},
+                },
+            },
+            "source_type": {"enum": ["cve", "cwe", "capec", "service"]},
+            "source_id": {"bsonType": "string"},
+            "technique_ids": {
+                "bsonType": "array",
+                "items": {"bsonType": "string"},
+            },
+            "stix_ids": {
+                "bsonType": ["array", "null"],
+                "items": {"bsonType": "string"},
+            },
+            "derivation": {"bsonType": "array"},
+            "confidence": {"bsonType": "double"},
+            "release_id": {"bsonType": "string"},
+            "computed_at": {"bsonType": "date"},
+            "source_meta": {"bsonType": ["object", "null"]},
+        },
+    }
+
+
+def scan_snapshots_schema() -> dict:
+    return {
+        "bsonType": "object",
+        "required": ["_id", "sha256", "source", "scan_type", "target", "assets", "captured_at"],
+        "properties": {
+            "_id": {"bsonType": "string"},
+            "sha256": {"bsonType": "string"},
+            "source": {"bsonType": "string"},
+            "scan_type": {"bsonType": "string"},
+            "target": {"bsonType": "string"},
+            "assets": {"bsonType": "array"},
+            "captured_at": {"bsonType": "date"},
+            "recorded_from": {"bsonType": "date"},
+            "recorded_to": {"bsonType": ["date", "null"]},
+        },
+    }
+
+
+def asset_technique_mappings_schema() -> dict:
+    return {
+        "bsonType": "object",
+        "required": [
+            "_id",
+            "scan_snapshot_id",
+            "host",
+            "techniques",
+            "release_id",
+            "computed_at",
+        ],
+        "properties": {
+            "_id": {
+                "bsonType": "object",
+                "required": ["scan_snapshot_id", "host"],
+                "properties": {
+                    "scan_snapshot_id": {"bsonType": "string"},
+                    "host": {"bsonType": "string"},
+                },
+            },
+            "scan_snapshot_id": {"bsonType": "string"},
+            "host": {"bsonType": "string"},
+            "hostname": {"bsonType": ["string", "null"]},
+            "techniques": {"bsonType": "array"},
+            "release_id": {"bsonType": "string"},
+            "computed_at": {"bsonType": "date"},
+            "recorded_from": {"bsonType": "date"},
+            "recorded_to": {"bsonType": ["date", "null"]},
+        },
+    }

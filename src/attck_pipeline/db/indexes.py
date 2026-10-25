@@ -99,3 +99,39 @@ def ingest_runs_indexes() -> list[IndexModel]:
     return [
         IndexModel([("release_id", ASCENDING)]),
     ]
+
+
+def capec_objects_indexes() -> list[IndexModel]:
+    return [
+        IndexModel([("capec_id", ASCENDING)], unique=True),
+        IndexModel([("attack_technique_ids", ASCENDING)]),
+        IndexModel([("cwe_ids", ASCENDING)]),
+        IndexModel(
+            [("name", TEXT), ("description", TEXT)],
+            weights={"name": 10, "description": 1},
+            name="capec_objects_text",
+            default_language="english",
+        ),
+    ]
+
+
+def vuln_technique_edges_indexes() -> list[IndexModel]:
+    return [
+        IndexModel([("technique_ids", ASCENDING)]),
+        IndexModel([("release_id", ASCENDING)]),
+    ]
+
+
+def scan_snapshots_indexes() -> list[IndexModel]:
+    return [
+        IndexModel([("source", ASCENDING), ("target", ASCENDING)]),
+        IndexModel([("captured_at", ASCENDING)]),
+    ]
+
+
+def asset_technique_mappings_indexes() -> list[IndexModel]:
+    return [
+        IndexModel([("scan_snapshot_id", ASCENDING)]),
+        IndexModel([("host", ASCENDING)]),
+        IndexModel([("techniques.technique_id", ASCENDING)]),
+    ]

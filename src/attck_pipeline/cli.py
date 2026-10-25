@@ -284,6 +284,64 @@ def search(
 
 
 @app.command()
+def capec_ingest():
+    """Ingest CAPEC attack patterns from MITRE."""
+    settings, client, db, secure_db, _ = _get_resources()
+    from attck_pipeline.sources.capec_source import CapecSource
+
+    source = CapecSource(settings)
+    stats = source.ingest(db=db)
+    logger.info(
+        f"CAPEC ingest: {stats['fetched']} patterns, "
+        f"{stats['inserted']} inserted, {stats['updated']} updated"
+    )
+    client.close()
+
+
+@app.command()
+def vulnmap_cve(cve_id: str, release_id: str | None = None):
+    """Look up ATT&CK techniques for a CVE."""
+    settings, client, db, secure_db, _ = _get_resources()
+    from attck_pipeline.sources.nvd_client import NvdClient
+    from attck_pipeline.sources.vuln_mapping import resolve_cve_to_techniques
+
+    nvd = NvdClient(settings)
+    result = resolve_cve_to_techniques(cve_id, db, release_id=release_id, nvd_client=nvd)
+
+    if not result.techniques:
+        logger.info(f"No ATT&CK mappings found for {cve_id}")
+    else:
+        logger.info(f"{cve_id} -> {len(result.techniques)} techniques (confidence={result.confidence:.2f}):")
+        for tid in result.techniques:
+            obj = db.attack_objects.find_one({"external_id": tid, "kind": {"$in": ["technique", "subtechnique"]}})
+            name = obj["name"] if obj else "?"
+            logger.info(f"  {tid:12s} {name}")
+        logger.info(f"Derivation chain ({len(result.derivation)} steps):")
+        for step in result.derivation:
+            logger.info(f"  {step['step']:16s} {step['from']} -> {step['to']}")
+    client.close()
+
+
+@app.command()
+def vulnmap_service(service_name: str, release_id: str | None = None):
+    """Look up ATT&CK techniques for a service."""
+    settings, client, db, secure_db, _ = _get_resources()
+    from attck_pipeline.sources.vuln_mapping import resolve_service_to_techniques
+
+    result = resolve_service_to_techniques(service_name, db, release_id=release_id)
+
+    if not result.techniques:
+        logger.info(f"No ATT&CK mappings found for service '{service_name}'")
+    else:
+        logger.info(f"Service '{service_name}' -> {len(result.techniques)} techniques:")
+        for tid in result.techniques:
+            obj = db.attack_objects.find_one({"external_id": tid, "kind": {"$in": ["technique", "subtechnique"]}})
+            name = obj["name"] if obj else "?"
+            logger.info(f"  {tid:12s} {name}")
+    client.close()
+
+
+@app.command()
 def serve(
     host: str = "0.0.0.0",
     port: int = 8000,
